@@ -6,16 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Countdown</title>
 <style>
+    html, body {
+        height: 100%; /* Ensure the body and HTML elements cover the entire viewport */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        overflow: hidden; /* Prevent scrolling */
+    }
+
     body {
         font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        background: url('background.jpg') no-repeat center center fixed; /* Add your background image */
+        display: flex; /* Use flexbox to center content */
+        justify-content: center;
+        align-items: center;
+        background: url('background.jpg') no-repeat center center fixed; /* Background image */
         background-size: cover;
         color: white;
     }
+
     #countdown {
         font-size: 3rem;
         font-weight: bold;
