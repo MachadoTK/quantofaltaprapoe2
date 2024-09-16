@@ -31,28 +31,28 @@
             color: white;
         }
 
-       h1 {
-    position: relative;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: transparent;
-    background: none; /* Remove any default background */
-}
+        h1 {
+            position: relative;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: transparent;
+            background: none;
+        }
 
-h1::before {
-    content: attr(data-text); /* Use the text content */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('images/text-bg.jpg') no-repeat center center;
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* Ensure text color is transparent */
-}
-
+        h1::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/text-bg.jpg') no-repeat center center;
+            background-size: cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            z-index: -1; /* Ensure the text background is behind the actual text */
+        }
 
         #countdown {
             font-size: 3rem;
@@ -63,32 +63,32 @@ h1::before {
 </head>
 <body>
 
-    <h1></h1> data-text="PATH OF EXILE 2 LANÇA EM:>PATH OF EXILE 2 LANÇA EM:</h1>
-<div id="countdown"></div>
+    <h1 data-text="PATH OF EXILE 2 LANÇA EM:">PATH OF EXILE 2 LANÇA EM:</h1>
+    <div id="countdown"></div>
 
-<script>
-    var countDownDate = new Date("Nov 15, 2024 17:00:00").getTime();
+    <script>
+        var countDownDate = new Date("Nov 15, 2024 17:00:00").getTime();
 
-    var x = setInterval(function() {
+        var x = setInterval(function() {
 
-        var now = new Date().getTime();
+            var now = new Date().getTime();
 
-        var distance = countDownDate - now;
+            var distance = countDownDate - now;
 
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-        + minutes + "m " + seconds + "s ";
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
 
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "LANÇOU!";
-        }
-    }, 1000);
-</script>
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "LANÇOU!";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
