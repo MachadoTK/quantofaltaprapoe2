@@ -31,14 +31,24 @@
         color: white;
     }
 
-    #header {
+   #header {
         font-size: 2rem;
         margin-bottom: 20px;
+        background: url('images/text-bg.jpg'); /* Updated to use text-bg.jpg */
+        background-size: cover; /* Ensure the image covers the text */
+        -webkit-background-clip: text; /* Clip the background to the text */
+        color: transparent; /* Make the text color transparent so only the image shows */
+        background-clip: text;
     }
 
     #countdown {
         font-size: 3rem;
         font-weight: bold;
+        background: url('images/text-bg.jpg'); /* Updated to use text-bg.jpg */
+        background-size: cover;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-clip: text;
     }
 </style>
 
