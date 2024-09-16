@@ -83,8 +83,11 @@ h1::before {
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+                document.getElementById("countdown").innerHTML = 
+                (days > 0 ? days + " " : "") + 
+                (hours > 0 ? hours + " " : "") + 
+                (minutes > 0 ? minutes + " " : "") + 
+                (seconds > 0 ? seconds : "");
 
             if (distance < 0) {
                 clearInterval(x);
