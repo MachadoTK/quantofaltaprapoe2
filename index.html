@@ -46,11 +46,13 @@ h1::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Example gradient */
+    background: linear-gradient(to bottom, gold, white); /* Gradient from gold to white */
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    z-index: -1;
+    color: transparent; /* Ensure text is transparent to only show the background */
+    z-index: -1; /* Ensure the background is behind the actual text */
+    display: block; /* Ensure the pseudo-element behaves like a block-level element */
+    line-height: 1.2; /* Adjust line-height to match the text for proper alignment */
 }
 
 
