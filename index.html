@@ -6,34 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Countdown</title>
 <style>
+    @font-face {
+        font-family: 'Fontin-Regular'; /* Replace with your font's name */
+        src: url('fonts/Fontin-Regular.otf') format('truetype'); /* Adjust file formats accordingly */
+        font-weight: normal;
+        font-style: normal;
+    }
+
     html, body {
-        height: 100%; /* Ensure the body and HTML elements cover the entire viewport */
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-        overflow: hidden; /* Prevent scrolling */
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
     }
 
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Fontin-Regular', sans-serif; /* Use the custom font here */
         display: flex;
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center; /* Center content vertically */
-        align-items: center; /* Center content horizontally */
-        background: url('background.jpg') no-repeat center center fixed; /* Background image */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url('background.jpg') no-repeat center center fixed;
         background-size: cover;
         color: white;
     }
 
     #header {
-        font-size: 2rem; /* Size of the header */
-        margin-bottom: 20px; /* Add space between header and countdown */
+        font-size: 2rem;
+        margin-bottom: 20px;
     }
 
     #countdown {
-        font-size: 3rem; /* Size of the countdown */
+        font-size: 3rem;
         font-weight: bold;
     }
 </style>
+
 </head>
 <body>
 
