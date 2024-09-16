@@ -31,42 +31,44 @@
             color: white;
         }
 
-       h1 {
-    position: relative;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: transparent; /* Ensure the text itself is invisible */
-    font-weight: bold; /* Ensure the text is bold for better visibility */
-}
+        h1 {
+            position: relative;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: transparent; /* Ensure the text itself is invisible */
+            font-weight: bold; /* Ensure the text is bold for better visibility */
+        }
 
-h1::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #b8860b, white); /* Even darker gold (#b8860b) to white */
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; /* Ensure text is transparent to only show the background */
-    z-index: -1; /* Ensure the background is behind the actual text */
-    display: block; /* Ensure the pseudo-element behaves like a block-level element */
-    line-height: 1.2; /* Adjust line-height to match the text for proper alignment */
-}
-
-
+        h1::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, #b8860b, white); /* Darker gold (#b8860b) to white */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent; /* Ensure text is transparent to only show the background */
+            z-index: -1; /* Ensure the background is behind the actual text */
+            display: block; /* Ensure the pseudo-element behaves like a block-level element */
+            line-height: 1.2; /* Adjust line-height to match the text for proper alignment */
+        }
 
         #countdown {
             font-size: 3rem;
             font-weight: bold;
             color: white;
+            background: url('timer_background.png') no-repeat center center; /* Background image */
+            background-size: cover; /* Ensure the background covers the entire element */
+            padding: 10px; /* Add padding to create space around the text */
+            border-radius: 5px; /* Optional: add rounded corners */
         }
     </style>
 </head>
 <body>
 
-   <h1 data-text="PATH OF EXILE 2 LANÇA EM:">PATH OF EXILE 2 LANÇA EM:</h1>
+    <h1 data-text="PATH OF EXILE 2 LANÇA EM:">PATH OF EXILE 2 LANÇA EM:</h1>
     <div id="countdown"></div>
 
     <script>
@@ -83,7 +85,8 @@ h1::before {
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("countdown").innerHTML = 
+            // Format the countdown output as "days hours minutes seconds"
+            document.getElementById("countdown").innerHTML = 
                 (days > 0 ? days + " " : "") + 
                 (hours > 0 ? hours + " " : "") + 
                 (minutes > 0 ? minutes + " " : "") + 
