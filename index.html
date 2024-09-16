@@ -5,49 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Countdown</title>
-<style>
-    @font-face {
-        font-family: 'Fontin-Regular'; 
-        src: url('fonts/Fontin-Regular.otf') format('opentype'); 
-        font-weight: normal;
-        font-style: normal;
-    }
+    <style>
+        @font-face {
+            font-family: 'Fontin-Regular'; 
+            src: url('fonts/Fontin-Regular.otf') format('opentype'); 
+            font-weight: normal;
+            font-style: normal;
+        }
 
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
 
-    body {
-        font-family: 'Fontin-Regular', sans-serif; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: url('background.jpg') no-repeat center center fixed;
-        background-size: cover;
-        color: white;
-    }
+        body {
+            font-family: 'Fontin-Regular', sans-serif; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
 
-   #header {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        background: url('images/text-bg.jpg') /* Updated to use text-bg.jpg */
-        background-size: cover; /* Ensure the image covers the text */
-        -webkit-background-clip: text; /* Clip the background to the text */
-        color: transparent; /* Make the text color transparent so only the image shows */
-        background-clip: text;
-    }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background: url('images/text-bg.jpg') no-repeat center center;
+            background-size: cover;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-clip: text;
+        }
 
-    #countdown {
-        font-size: 3rem;
-        font-weight: bold;
-        color: white;
-    }
-</style>
-
+        #countdown {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
