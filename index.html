@@ -15,16 +15,22 @@
 
     body {
         font-family: Arial, sans-serif;
-        display: flex; /* Use flexbox to center content */
-        justify-content: center;
-        align-items: center;
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
         background: url('background.jpg') no-repeat center center fixed; /* Background image */
         background-size: cover;
         color: white;
     }
 
+    #header {
+        font-size: 2rem; /* Size of the header */
+        margin-bottom: 20px; /* Add space between header and countdown */
+    }
+
     #countdown {
-        font-size: 3rem;
+        font-size: 3rem; /* Size of the countdown */
         font-weight: bold;
     }
 </style>
