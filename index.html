@@ -77,10 +77,11 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 200%;
-            height: 100%;
-            background: url('images/timer_background.png') no-repeat center center; /* Background image */
-            background-size: cover; /* Ensure the image covers the entire element */
+            width: 200px; /* Set the width of the background image */
+            height: 100%; /* Ensure the image covers the height of the container */
+            background: url('images/timer_background.png') no-repeat; /* Use the updated image URL */
+            background-size: cover; /* Ensure the image covers the element's width */
+            background-position: -10px center; /* Shift the image 10px to the left */
             z-index: 0; /* Ensure the image is behind the countdown text */
             border-radius: 5px; /* Optional: add rounded corners to the background image */
         }
