@@ -110,10 +110,10 @@
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             document.getElementById("countdown").innerHTML = 
-                (days > 0 ? `<span>${days}d</span>` : "") + 
-                (hours > 0 ? `<span>${hours}h</span>` : "") + 
-                (minutes > 0 ? `<span>${minutes}m</span>` : "") + 
-                `<span>${seconds}s</span>`;
+                (days > 0 ? `<span>${days}</span>` : "") + 
+                (hours > 0 ? `<span>${hours}</span>` : "") + 
+                (minutes > 0 ? `<span>${minutes}</span>` : "") + 
+                `<span>${seconds}</span>`;
         };
 
         const x = setInterval(updateCountdown, 1000);
