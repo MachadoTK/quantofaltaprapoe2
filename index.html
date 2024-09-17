@@ -72,19 +72,6 @@
             z-index: 1; /* Ensure the countdown text is above the background image */
         }
 
-        #countdown-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 600px; /* Set the width of the background image */
-            height: 150%; /* Ensure the image covers the height of the container */
-            background: url('images/timer_background.png') no-repeat; /* Use the updated image URL */
-            background-size: cover; /* Ensure the image covers the element's width */
-            background-position: -60px center; /* Shift the image 10px to the left */
-            z-index: 0; /* Ensure the image is behind the countdown text */
-            border-radius: 5px; /* Optional: add rounded corners to the background image */
-        }
     </style>
 </head>
 <body>
