@@ -73,6 +73,11 @@
             font-weight: bold;
             color: white;
         }
+
+        /* Espaçamento entre os valores do contador */
+        #countdown span {
+            margin: 0 10px; /* Espaçamento horizontal entre os valores do contador */
+        }
     </style>
 </head>
 <body>
@@ -105,10 +110,10 @@
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             document.getElementById("countdown").innerHTML = 
-                (days > 0 ? days + " " : "") + 
-                (hours > 0 ? hours + " " : "") + 
-                (minutes > 0 ? minutes + " " : "") + 
-                (seconds > 0 ? seconds : "");
+                (days > 0 ? `<span>${days}d</span>` : "") + 
+                (hours > 0 ? `<span>${hours}h</span>` : "") + 
+                (minutes > 0 ? `<span>${minutes}m</span>` : "") + 
+                `<span>${seconds}s</span>`;
         };
 
         const x = setInterval(updateCountdown, 1000);
